@@ -1,0 +1,110 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
+  white-space: nowrap;
+}
+
+.button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.button:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--color-gold) 55%, transparent);
+  outline-offset: 2px;
+}
+
+/* Variantes */
+.variant-primary {
+  background-color: var(--color-ink);
+  color: var(--cream);
+}
+
+.variant-primary:hover {
+  background-color: var(--color-navy);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+.variant-primary:active {
+  transform: translateY(0);
+}
+
+.variant-gold {
+  background-color: var(--color-gold);
+  color: var(--color-ink);
+}
+
+.variant-gold:hover {
+  background-color: var(--color-gold-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
+
+.variant-outline {
+  background-color: transparent;
+  border-color: var(--color-gold);
+  color: var(--color-ink);
+}
+
+.variant-outline:hover {
+  background-color: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--color-ink);
+}
+
+.variant-outline-onDark {
+  border-color: rgba(255, 255, 255, 0.55);
+  color: #ffffff;
+}
+
+.variant-outline-onDark:hover {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: var(--color-ink);
+}
+
+.variant-ghost {
+  background-color: transparent;
+  color: var(--color-ink);
+}
+
+.variant-ghost:hover {
+  background-color: var(--surface-alt);
+}
+
+/* Tamaños */
+.size-sm {
+  padding: 0.55rem 1rem;
+  font-size: 0.85rem;
+}
+
+.size-md {
+  padding: 0.8rem 1.65rem;
+  font-size: 0.95rem;
+}
+
+.size-lg {
+  padding: 1rem 2.2rem;
+  font-size: 1.05rem;
+}
+
+.fullWidth {
+  width: 100%;
+}

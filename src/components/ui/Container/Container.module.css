@@ -1,0 +1,19 @@
+.container {
+  width: 100%;
+  margin-inline: auto;
+}
+
+.size-lg {
+  max-width: var(--page-max);
+  padding-inline: var(--page-pad);
+}
+
+.size-md {
+  max-width: 960px;
+  padding-inline: var(--page-pad);
+}
+
+.size-sm {
+  max-width: 720px;
+  padding-inline: var(--page-pad);
+}

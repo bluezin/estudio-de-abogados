@@ -1,0 +1,143 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background-color: rgba(247, 244, 238, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line-light);
+}
+
+.spacer {
+  height: 73px;
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  max-width: var(--page-max);
+  margin-inline: auto;
+  padding: 0.9rem var(--page-pad);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  flex-shrink: 0;
+}
+
+.logo {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, var(--color-ink), var(--color-navy));
+  color: var(--color-gold-light);
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.brandText strong {
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  color: var(--color-ink);
+  letter-spacing: 0.01em;
+}
+
+.brandText small {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.ctaPhone {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1rem;
+  border: 1px solid var(--line-light);
+  border-radius: var(--radius-sm);
+  background-color: var(--paper);
+  color: var(--color-ink);
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ctaPhone:hover {
+  border-color: var(--color-gold);
+  box-shadow: var(--shadow-card);
+}
+
+.toggle {
+  display: none;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--line-light);
+  border-radius: var(--radius-sm);
+  background: var(--paper);
+  color: var(--color-ink);
+  cursor: pointer;
+}
+
+.toggle:hover {
+  border-color: var(--color-gold);
+}
+
+@media (max-width: 900px) {
+  .ctaPhone {
+    display: none;
+  }
+
+  .toggle {
+    display: grid;
+  }
+}
+
+@media (max-width: 520px) {
+  .inner {
+    padding-block: 0.6rem;
+    gap: 10px;
+  }
+
+  .spacer {
+    height: 57px;
+  }
+
+  .brandText strong {
+    font-size: 1rem;
+  }
+
+  .brandText small {
+    font-size: 0.6rem;
+  }
+
+  .logo {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+@media (max-width: 320px) {
+  .toggle {
+    border: none;
+  }
+
+  .inner {
+    padding: 12px;
+  }
+}

@@ -1,0 +1,68 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.6rem;
+  padding: clamp(1.75rem, 3.5vw, 2.5rem) clamp(1.25rem, 3vw, 1.75rem);
+  background-color: var(--paper);
+  border: 1px solid var(--line-light);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-card);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-soft);
+  border-color: var(--color-gold-light);
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  margin-bottom: 0.4rem;
+  background: linear-gradient(135deg, var(--color-navy-soft), var(--color-ink));
+  color: var(--color-gold-light);
+  font-family: var(--font-serif);
+  font-size: 1.7rem;
+  font-weight: 700;
+  border: 3px solid var(--surface-alt);
+  box-shadow: var(--shadow-card);
+}
+
+.name {
+  font-size: 1.2rem;
+}
+
+.role {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.specialties {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.45rem;
+  margin-top: 0.35rem;
+}
+
+.specialties li {
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  background-color: var(--surface-alt);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-body);
+}

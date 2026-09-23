@@ -79,7 +79,7 @@
 }
 
 .actions__know {
-  color: white;
+  color: white !important;
 }
 
 .highlights {
